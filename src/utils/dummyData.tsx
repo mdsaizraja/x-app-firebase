@@ -25,7 +25,7 @@ export const adData = [
     require('../assets/products/c5.jpg'),
 ]
 
-const productsList =
+export const productsList =
     [
         {
             id: 1,
@@ -166,8 +166,8 @@ export const orders = [
     {
         orderId: 'ORDER21312',
         items: [
-            { id: 'a', item: {name:'Milk'}, count: 2 },
-            { id: 'b', item: {name:'Tea'}, count: 1 },
+            { id: 'a', name:'Milk', count: 2 },
+            { id: 'b', name:'Tea', count: 1 },
         ],
         totalPrice: 25.00,
         createdAt: '2024-08-10T10:00:00Z',
@@ -176,8 +176,8 @@ export const orders = [
     {
         orderId: 'ORDER21212',
         items: [
-            { id: 'c', item: 'Burger', count: 1 },
-            { id: 'd', item: 'Fries', count: 3 },
+            { id: 'c', name: 'Burger', count: 1 },
+            { id: 'd', name: 'Fries', count: 3 },
         ],
         totalPrice: 15.00,
         createdAt: '2024-08-11T11:30:00Z',

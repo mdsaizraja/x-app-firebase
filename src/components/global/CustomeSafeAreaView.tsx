@@ -1,0 +1,25 @@
+import React, { Children } from 'react';
+import { View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+interface CustomeSafeAreaView{
+    children: React.ReactNode;
+    style?: ViewStyle;
+    
+}
+
+const CustomeSafeAreaView:FC<CustomSafeAreaViewProps> = () => {
+  return (
+    <View style={styles.container}>
+        <SafeAreaView/>
+        {Children}
+      </View>
+  )
+}
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff'
+    }
+})
+export default CustomeSafeAreaView

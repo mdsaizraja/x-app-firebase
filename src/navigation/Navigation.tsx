@@ -1,15 +1,34 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SplashScreen from '@features/auth/SplashScreen';
+import { navigationRef } from '@utils/NavigationUtils';
 
 const Stack = createStackNavigator();
 
-const Navigation = () => {
+const Navigation:FC = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Splash" component={SplashScreen} />
+    <NavigationContainer ref={navigationRef}>
+      <Stack.Navigator
+      initialRouteName='SplashScreen'
+      screenOptions={{
+        headerShown:false
+      }}
+      >
+        <Stack.Screen
+        options={{
+          animation:'fade'
+        }} 
+         name="CustomerLogin" component={CustomerLogin} />
+        <Stack.Screen 
+        options={{
+          animation:'fade'
+        }} 
+        name="SellerLogin" component={SellerLogin} />
+        <Stack.Screen 
+        options={{
+          animation:'fade'
+        }} 
+        name="DeliveryLogin" component={DeliveryLogin} />
       </Stack.Navigator>
     </NavigationContainer>
   );
