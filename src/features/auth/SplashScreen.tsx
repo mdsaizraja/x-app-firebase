@@ -1,19 +1,24 @@
 import Logo from '@assets/images/logo.jpeg';
 import { Colors } from '@utils/Constants.tsx';
-import { screenHeight, screenWidth } from '@utils/Scaling.tsx';
-import React, { useEffect, FC } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
 import { navigate } from '@utils/NavigationUtils';
+import { screenHeight, screenWidth } from '@utils/Scaling.tsx';
+import { FC, useEffect } from 'react';
+import { Image, StyleSheet, View } from 'react-native';
 
-const SplashScreen: FC = () => {
+const SplashScreen:FC = () => {
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      navigate('CustomerLogin');
-    }, 1000);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    const navigateUser=async()=>{
+      try {
+        navigate("CustomerLogin")
+        
+      } catch (error) {
+        
+      }
+    }
+    const timeoutId = setTimeout(navigateUser,1000)
+
+    return () =>clearTimeout(timeoutId)
   }, []);
 
   return (

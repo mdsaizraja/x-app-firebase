@@ -2,7 +2,7 @@ import CustomeSafeAreaView from '@components/global/CustomeSafeAreaView';
 import { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const CustomerLogin: FC = () => {
+const CustomerLogin:FC = () => {
   return (
     <View style={styles.container}>
       <CustomeSafeAreaView>

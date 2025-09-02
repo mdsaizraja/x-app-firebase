@@ -6,13 +6,18 @@
     "orientation": "portrait",
     "icon": "./src/assets/images/logo.jpeg",
     "userInterfaceStyle": "light",
+    "jsEngine": "jsc",
     "splash": {
       "image": "./src/assets/images/logo.jpeg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.xapp",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -26,6 +31,11 @@
     },
     "plugins": [
       "react-native-edge-to-edge"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "912ddba4-4752-4fd9-8a7c-e5dcd3d51a96"
+      }
+    }
   }
 }
